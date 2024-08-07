@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityTimeList">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backdrop">
+
+        <ImageButton
+            android:id="@+id/imageBack"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/back"
+            android:src="@drawable/baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/lblAnalytics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Timesheets"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SearchView
+            android:id="@+id/searchProjects"
+            android:layout_width="310dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/round_corners"
+            android:queryHint="Projects"
+            android:searchHintIcon="@drawable/loupe"
+            android:textColorHint="@color/navy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblAnalytics" />
+
+        <TextView
+            android:id="@+id/lblInstructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/josefin_sans_bold_italic"
+            android:text="Select date range"
+            android:textAlignment="textEnd"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/btnCalendar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchProjects" />
+
+        <Button
+            android:id="@+id/btnCalendar"
+            android:layout_width="33dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_height="29dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/white"
+            android:foreground="@drawable/check_cal"
+            android:foregroundTint="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lblInstructions"
+            app:layout_constraintTop_toBottomOf="@+id/searchProjects" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCalendar"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- FrameLayout 1 -->
+                <FrameLayout
+                    android:id="@+id/frameLayout1"
+                    android:layout_width="313dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/round_corners_white_timer">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/lblTimeSheetItem1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:text="Timesheet name"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintHorizontal_chainStyle="spread_inside" />
+
+                        <TextView
+                            android:id="@+id/lblTimeSheetHours1"
+                            android:layout_width="81dp"
+                            android:layout_height="25dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:text="8h 30min"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:backgroundTint="@color/navy"
+                            app:layout_constraintEnd_toStartOf="@+id/lblTimeSheetHours1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:srcCompat="@drawable/ic_nav_timesheets" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+
+                <!-- Repeat the structure for other FrameLayouts -->
+                <!-- FrameLayout 2 -->
+                <FrameLayout
+                    android:id="@+id/frameLayout2"
+                    android:layout_width="313dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/round_corners_white_timer">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/lblTimeSheetItem2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:text="Timesheet name"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintHorizontal_chainStyle="spread_inside" />
+
+                        <TextView
+                            android:id="@+id/lblTimeSheetHours2"
+                            android:layout_width="81dp"
+                            android:layout_height="25dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:text="8h 30min"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:backgroundTint="@color/navy"
+                            app:layout_constraintEnd_toStartOf="@+id/lblTimeSheetHours2"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:srcCompat="@drawable/ic_nav_timesheets" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+
+                <!-- FrameLayout 3 -->
+                <FrameLayout
+                    android:id="@+id/frameLayout3"
+                    android:layout_width="313dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/round_corners_white_timer">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/lblTimeSheetItem3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:text="Timesheet name"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintHorizontal_chainStyle="spread_inside" />
+
+                        <TextView
+                            android:id="@+id/lblTimeSheetHours3"
+                            android:layout_width="81dp"
+                            android:layout_height="25dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:text="8h 30min"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:backgroundTint="@color/navy"
+                            app:layout_constraintEnd_toStartOf="@+id/lblTimeSheetHours3"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:srcCompat="@drawable/ic_nav_timesheets" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

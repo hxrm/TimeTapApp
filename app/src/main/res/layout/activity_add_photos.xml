@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backdrop"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/lblAnalytics"
+            android:layout_width="260dp"
+            android:layout_height="81dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="@string/add_photograph"
+            android:textAlignment="center"
+            android:textColor="@color/navy"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnAddCamera"
+            android:layout_width="250dp"
+            android:layout_height="51dp"
+            android:layout_marginBottom="416dp"
+
+            android:background="@drawable/round_corners_navy"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="@string/use_phone_camera"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textColorLink="@color/navy"
+            android:textSize="20sp"
+            app:icon="@drawable/camera"
+            app:iconGravity="end"
+            app:iconSize="20dp"
+            app:iconTint="@color/white"
+            app:iconTintMode="src_in"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lblAnalytics"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/btnAddGallery"
+            android:layout_width="250dp"
+            android:layout_height="51dp"
+            android:layout_marginBottom="324dp"
+
+            android:background="@drawable/round_corners_navy"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="@string/add_from_gallery"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textColorLink="@color/navy"
+            android:textSize="20sp"
+            app:icon="@drawable/photos"
+            app:iconGravity="end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAddCamera"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageButton
+            android:id="@+id/imageBack"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/back"
+            android:src="@drawable/baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

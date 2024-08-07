@@ -1,0 +1,9 @@
+
+<resources>
+    <!--  Base application theme.  -->
+    <style name="Base.Theme.TimeTap" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--  Customize your light theme here.  -->
+        <item name="button1">@drawable/button1 </item>
+    </style>
+    <style name="Theme.TimeTap" parent="Base.Theme.TimeTap"/>
+</resources>

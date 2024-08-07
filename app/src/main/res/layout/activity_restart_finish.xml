@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/backdrop"
+            android:elevation="4dp"
+            android:theme="@style/AppTheme"
+            app:popupTheme="@style/AppTheme">
+
+            <!-- Centered Text -->
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="TimeTape"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <!-- Toggle Button -->
+            <ImageView
+                android:id="@+id/toggle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/toggle" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Fragment Container -->
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar">
+            <!-- Add the background photo and other layout elements here -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- Background Image -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/backdrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <!-- Blue Line -->
+
+                    <!-- timetapText -->
+
+                    <!-- Points Counter -->
+
+                    <TextView
+                        android:id="@+id/pointsCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:fontFamily="@font/josefin_sans_bold"
+                        android:text="@string/points"
+                        android:textColor="#8EDCE7"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="33dp" />
+
+                    <TextView
+                        android:id="@+id/pointsValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/josefin_sans_bold"
+                        android:text="@string/medal"
+                        android:textColor="#8EDCE7"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/pointsCounter" />
+
+                    <TextView
+                        android:id="@+id/streakCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/josefin_sans_bold"
+                        android:text="@string/streak"
+                        android:textColor="#6F9FDD"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/pointsCounter" />
+
+                    <TextView
+                        android:id="@+id/streakValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/josefin_sans_bold"
+                        android:text="@string/fire"
+                        android:textColor="#6F9FDD"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/streakCounter" />
+
+                    <!-- Blue Background centered below the emojis with rounded corners -->
+                    <FrameLayout
+                        android:id="@+id/frameLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginBottom="80dp"
+                        android:background="@drawable/round_corners_navy"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/pointsValue"
+                        app:layout_constraintWidth_percent="0.9">
+
+                        <LinearLayout
+                            android:id="@+id/grouped"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <!-- Placeholder for Project Title and Task Status -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <!-- Placeholder for Project Title -->
+                                <TextView
+                                    android:id="@+id/projectTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:fontFamily="@font/josefin_sans_bold"
+                                    android:text="@string/e_commerce_web_app"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <!-- Placeholder for Task Status -->
+                                <TextView
+                                    android:id="@+id/taskStatus"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/josefin_sans_bold"
+                                    android:text="@string/task_empty"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <!-- Start and Finish Buttons -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <!-- Button to Start New Timesheet -->
+                                <Button
+                                    android:id="@+id/restartTaskButton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/round_corners_orange"
+                                    android:fontFamily="@font/josefin_sans_bold"
+                                    android:text="@string/restart"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp" />
+
+                                <!-- New Finish Button -->
+                                <Button
+                                    android:id="@+id/finishTaskButton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/round_corners_red"
+                                    android:fontFamily="@font/josefin_sans_bold"
+                                    android:text="@string/finish"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+                            </LinearLayout>
+
+                            <!-- Continue Later Button -->
+                            <Button
+                                android:id="@+id/continueLaterButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:background="@drawable/rounded_corners_white"
+                                android:fontFamily="@font/josefin_sans_bold"
+                                android:text="@string/continue_later"
+                                android:textAllCaps="false"
+                                android:textColor="@color/navy"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <!-- Navigation View -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/main_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>
+

@@ -1,0 +1,17 @@
+<resources>
+
+    <style name="JosefinSansButtonText" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/josefin_sans</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/light_blue</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="button1">@drawable/button1</item>
+    </style>
+
+</resources>

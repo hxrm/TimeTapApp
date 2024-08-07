@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewProjectActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backdrop"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="360dp"
+            android:layout_height="695dp"
+            android:background="@drawable/round_corners"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/lblEmail"
+                    android:layout_width="350dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="188dp"
+                    android:fontFamily="@font/josefin_sans_light"
+                    android:text="joeblack@email.com"
+                    android:textAlignment="center"
+                    android:textColor="@color/gray"
+                    android:textSize="34sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="13dp" />
+
+                <TextView
+                    android:id="@+id/lblname"
+                    android:layout_width="222dp"
+                    android:layout_height="57dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="132dp"
+                    android:fontFamily="@font/josefin_sans_bold"
+                    android:text="@string/joe_black"
+                    android:textAlignment="center"
+                    android:textColor="@color/navy"
+                    android:textSize="40sp"
+                    app:layout_constraintBottom_toTopOf="@+id/lblEmail"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/profile"
+                    app:layout_constraintBottom_toTopOf="@+id/lblname"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/light_blue" />
+
+                <ImageButton
+                    android:id="@+id/imageBackProfile"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="16dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/back"
+                    android:src="@drawable/baseline_arrow_back_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/black" />
+
+
+                <FrameLayout
+                    android:id="@+id/frameLayout1"
+                    android:layout_width="149dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/round_corners_navy_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblEmail">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+                            android:id="@+id/lblTimeSheetItem1"
+                            android:layout_width="142dp"
+                            android:layout_height="21dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:text="Username"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/lblUsername"
+                            android:layout_width="81dp"
+                            android:layout_height="25dp"
+                            android:backgroundTint="@color/navy"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:foregroundTint="@color/navy"
+                            android:text="Pablo"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.262"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.509" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout2"
+                    android:layout_width="149dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/round_corners_navy_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/frameLayout1"
+                    app:layout_constraintTop_toBottomOf="@+id/lblEmail">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="79dp">
+
+                        <TextView
+                            android:id="@+id/lblTotalProjects"
+                            android:layout_width="80dp"
+                            android:layout_height="21dp"
+                            android:layout_marginTop="28dp"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:text="7"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.231"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/lblTimeSheetHours2"
+                            android:layout_width="123dp"
+                            android:layout_height="16dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="8dp"
+                            android:backgroundTint="@color/navy"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:foregroundTint="@color/navy"
+                            android:text="Total Projects"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.235"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+                <!-- New FrameLayouts -->
+                <FrameLayout
+                    android:id="@+id/frameLayout3"
+                    android:layout_width="149dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/round_corners_navy_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayout1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/lblTimeSheetItem3"
+                            android:layout_width="142dp"
+                            android:layout_height="21dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:text="Current Streak"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/lblCurrentStreak"
+                            android:layout_width="72dp"
+                            android:layout_height="26dp"
+                            android:backgroundTint="@color/navy"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:foregroundTint="@color/navy"
+                            android:text="8"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.494"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.509" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout4"
+                    android:layout_width="149dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/round_corners_navy_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/frameLayout3"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayout2">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="79dp">
+
+                        <TextView
+                            android:id="@+id/lblAvgWeeklyHours"
+                            android:layout_width="90dp"
+                            android:layout_height="17dp"
+                            android:layout_marginTop="28dp"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:text="12.5 Hrs"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.492"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/lblTimeSheetHours4"
+                            android:layout_width="134dp"
+                            android:layout_height="16dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="4dp"
+                            android:backgroundTint="@color/navy"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:foregroundTint="@color/navy"
+                            android:text="Average Weekly Hours"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+                <!-- New FrameLayouts -->
+                <FrameLayout
+                    android:id="@+id/frameLayout5"
+                    android:layout_width="149dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/round_corners_navy_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayout3">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="82dp">
+
+                        <TextView
+                            android:id="@+id/lblTimeSheetItem5"
+                            android:layout_width="142dp"
+                            android:layout_height="21dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:text="Points"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/lblPoints"
+                            android:layout_width="81dp"
+                            android:layout_height="25dp"
+                            android:backgroundTint="@color/navy"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:foregroundTint="@color/navy"
+                            android:text="1087"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.262"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.509" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout6"
+                    android:layout_width="149dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/round_corners_navy_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/frameLayout5"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayout4">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="79dp">
+
+                        <TextView
+                            android:id="@+id/lblTotalHours"
+                            android:layout_width="80dp"
+                            android:layout_height="21dp"
+                            android:layout_marginTop="28dp"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:text="400 Hrs"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.231"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/lblTimeSheetHours6"
+                            android:layout_width="123dp"
+                            android:layout_height="16dp"
+                            android:layout_marginTop="8dp"
+                            android:backgroundTint="@color/navy"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:foregroundTint="@color/navy"
+                            android:text="All Time Total Hours"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.235"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout7"
+                    android:layout_width="149dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/round_corners_navy_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayout5">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/lblTimeSheetItem7"
+                            android:layout_width="142dp"
+                            android:layout_height="21dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:text="Min Hours Goal"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/lblMinHoursGoal"
+                            android:layout_width="81dp"
+                            android:layout_height="25dp"
+                            android:backgroundTint="@color/navy"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:foregroundTint="@color/navy"
+                            android:text="2 Hrs"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.262"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.509" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayout8"
+                    android:layout_width="149dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/round_corners_navy_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/frameLayout7"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayout6">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="79dp">
+
+                        <TextView
+                            android:id="@+id/lblMaxHoursGoal"
+                            android:layout_width="80dp"
+                            android:layout_height="21dp"
+                            android:layout_marginTop="28dp"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:text="6 Hrs"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.231"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/lblTimeSheetHours8"
+                            android:layout_width="123dp"
+                            android:layout_height="16dp"
+                            android:layout_marginTop="8dp"
+                            android:backgroundTint="@color/navy"
+                            android:fontFamily="@font/josefin_sans_bold"
+                            android:foregroundTint="@color/navy"
+                            android:text="Max Hours Goal"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.235"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="269dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="2dp"
+
+                    android:layout_marginEnd="50dp"
+                    android:progressTint="@color/gray"
+                    android:progressTintMode="src_over"
+                    android:secondaryProgressTint="#9C27B0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.714"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/navy"
+                    android:fontFamily="@font/josefin_sans_bold"
+                    android:foregroundTint="@color/navy"
+                    android:text="Next Milestone"
+                    android:textColor="@color/navy"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayout7"
+                    tools:layout_editor_absoluteX="20dp" />
+
+                <Button
+                    android:id="@+id/buttonEditProfile"
+                    android:layout_width="43dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@drawable/edit"
+                    android:backgroundTint="@color/navy"
+                    app:layout_constraintStart_toEndOf="@+id/progressBar"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayout8" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
